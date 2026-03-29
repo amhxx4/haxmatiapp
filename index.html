@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HaxMati App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="hud-top">
+        <div id="scoreboard" class="scoreboard">Rojo 0 - 0 Azul</div>
+        <div id="timer" class="timer">03:00</div>
+      </header>
+
+      <main class="game-layout">
+        <section id="mainMenu" class="menu-panel">
+          <h1>⚽ HaxMati App</h1>
+          <p>Prototipo inspirado en Haxball con mejoras modernas.</p>
+          <div class="menu-buttons">
+            <button id="playBtn">Jugar</button>
+            <button id="createRoomBtn">Crear sala</button>
+            <button id="joinRoomBtn">Unirse a sala</button>
+            <button id="settingsBtn">Ajustes</button>
+            <button id="controlsBtn">Controles</button>
+          </div>
+          <div id="menuInfo" class="menu-info"></div>
+        </section>
+
+        <section class="canvas-panel">
+          <canvas id="gameCanvas" width="1200" height="700" aria-label="Cancha de HaxMati"></canvas>
+          <div class="name-input-wrap">
+            <label for="playerName">Nombre:</label>
+            <input id="playerName" type="text" maxlength="16" placeholder="Tu nombre" />
+          </div>
+        </section>
+
+        <aside class="chat-panel">
+          <h2>Chat</h2>
+          <div id="chatMessages" class="chat-messages"></div>
+          <form id="chatForm" class="chat-form">
+            <input id="chatInput" type="text" placeholder="Escribe un mensaje..." maxlength="140" />
+            <button type="submit">Enviar</button>
+          </form>
+        </aside>
+      </main>
+    </div>
+
+    <script src="physics.js"></script>
+    <script src="player.js"></script>
+    <script src="ball.js"></script>
+    <script src="ui.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
